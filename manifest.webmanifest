@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "Agenda Salón Yuny",
+  "short_name": "Yuny",
+  "description": "Agenda de citas, ingresos y clientas para el salón de uñas.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFBFC",
+  "theme_color": "#FFFBFC",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

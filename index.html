@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es" data-tema="claro" data-letra="m">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>Agenda Salón Yuny</title>
+<meta name="description" content="Agenda de citas, ingresos y clientas para salón de uñas.">
+<meta name="theme-color" content="#FFFBFC">
+<meta name="color-scheme" content="light dark">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Yuny">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="chorus.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>
+/* Aplica tema y tamaño de letra antes de pintar, para que no haya destello blanco. */
+try{var a=(JSON.parse(localStorage.getItem('yuny_agenda_v1')||'{}').ajustes)||{};var m=a.modo||'auto';
+var d=m==='oscuro'||(m==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches);
+document.documentElement.dataset.tema=d?'oscuro':'claro';document.documentElement.dataset.letra=a.letra||'m';
+document.querySelector('meta[name=theme-color]').content=d?'#17111A':'#FFFBFC';}catch(e){}
+</script>
+</head>
+<body>
+<div id="bg" aria-hidden="true"></div>
+<div id="app">
+  <main id="main" tabindex="-1"></main>
+  <nav id="nav" aria-label="Secciones"></nav>
+</div>
+<div id="sheets"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<input id="fileIn" type="file" accept=".json,application/json" hidden>
+<noscript>Esta agenda necesita JavaScript para funcionar.</noscript>
+<script src="app.js" defer></script>
+</body>
+</html>
